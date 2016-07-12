@@ -1,23 +1,23 @@
-// @mixin priCol($color...) {
-//   @for $i from 1 through 4 {
-//     .box:nth-child(#{$i}) {
-//       background: #{$color};
-//     }
-//   }
-// }
-*,
-*:after,
-*:before {
-  margin: 0;
-  padding: 0;
-  @include border-box;
+@import 'variables';
+@import 'mixins';
+
+.container {
+  width: 100%;
+  margin: 0 auto;
 }
 
-[class*='']
+.container, .row {
+  @extend %clearfix;
+}
 
 .primary .box {
   width: 20%;
   height: 20px;
   margin-right: 5px;
+  background: orange;
+  display: inline-block;
+  @include primary-colors(#d8f5e8, teal, gold, tomato);
   // @include priCol(#98ff98, teal, gold, tomato);
 }
+
+// @media only screen and (min-)
