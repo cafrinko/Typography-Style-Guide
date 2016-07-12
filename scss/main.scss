@@ -1,0 +1,14 @@
+// @mixin priCol($color...) {
+//   @for $i from 1 through 4 {
+//     .box:nth-child(#{$i}) {
+//       background: #{$color};
+//     }
+//   }
+// }
+
+.primary .box {
+  width: 20%;
+  height: 20px;
+  margin-right: 5px;
+  // @include priCol(#98ff98, teal, gold, tomato);
+}
